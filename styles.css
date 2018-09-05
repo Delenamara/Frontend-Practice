@@ -1,0 +1,271 @@
+body {
+    background-color: #ecf1f5;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar-dark {
+    height: 75px;
+}
+
+.navbar-brand {
+    font-size: 18px;
+}
+
+.userpic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.fa-fingerprint {
+    color: #ff0042;
+}
+
+.btn-outline-secondary {
+    font-size: 13px;
+    line-height: 1rem;
+    border-color: white;
+    border-radius: 15px;
+    color: white;
+}
+
+.form-control {
+    border-color: transparent;
+    color: #c2c8d6;
+}
+
+.fa-plus {
+    color: #ff0042;
+    font-size: 12px;
+}
+
+.btn-outline-success {
+    font-size: 13px;
+    line-height: 1rem;
+    border-radius: 15px;
+    background-color: #2b3245;
+    color: white;
+    box-shadow: 0px 7px 15px #c2c8d6;
+}
+
+.fa-sync-alt {
+    color: #c2c8d6;
+    display: block;
+}
+
+.fa-sync-alt:hover {
+    color: #2b3245;
+}
+
+.icon {
+    background-color: transparent;
+    border-radius: 50px;
+    line-height: 1.6rem;
+    border-color: #c2c8d6;
+    color: #c2c8d6;
+    font-size: 13px;
+}
+
+.btn-secondary {
+    font-size: 13px;
+    line-height: 1rem;
+    background-color: transparent;
+    border-radius: 15px;
+    border-color: #c2c8d6;
+    color: #c2c8d6;
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 85px;
+    background-color: #2b3245;
+    overflow-x: hidden;
+    padding-top: 20px;
+    position: relative;
+    z-index: 9;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 1.5rem .5rem 1.5rem 2rem;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav-menu {
+    top: 0;
+    left: 100px; /*работает для absolute и relative*/
+    width: 200px;
+    height: 100%;
+    background-color: #3b435c;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+    transform: translateX(-100%);
+}
+
+.sidenav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.sidenav-icon {
+    transition: .5s;
+}
+
+.sidenav-icon.active {
+    background-color: #3b435c;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.devs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-light {
+    font-size: 13px;
+    line-height: 1rem;
+    border-radius: 15px;
+    color: #c2c8d6;
+    background-color: white;
+    box-shadow: 0px 4px 15px #c2c8d6;
+}
+
+.btn-danger {
+    color: white;
+    font-size: 13px;
+    line-height: 1rem;
+    border-radius: 15px;
+    border-color: #f50043;
+    background-color: #ff0042;
+    box-shadow: 0px 4px 15px #ff0042;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    transition: .5s;
+}
+
+.chosen {
+    box-shadow: 0px 10px 50px #c2c8d6;
+    transform: translateY(-5px);
+}
+
+.user-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-check-circle {
+    color: #52ce5c;
+}
+
+.fa-pencil-alt {
+    color: #c2c8d6;
+}
+
+.fa-trash-alt {
+    color: #c2c8d6;
+}
+
+.fa-circle {
+    color: #c2c8d6;
+}
+
+.avatar {
+    margin: 1rem auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.country {
+    text-align: center;
+    font-size: 12px;
+    color: #c2c8d6;
+    padding-bottom: 1rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f8fd;
+    margin: -20px -30px;
+    padding: 1rem 4rem;
+}
+
+.followers {
+    text-align: center;
+    font-size: 12px;
+    color: #c2c8d6;
+}
+
+.following {
+    text-align: center;
+    font-size: 12px;
+    color: #c2c8d6;
+}
+
+.number {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b3245;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    background-color: #ff0042;
+    border-radius: 100px;
+    animation: spinner-animation 1s infinite;
+}
+
+@keyframes spinner-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

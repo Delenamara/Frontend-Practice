@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esthetic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="loader d-flex justify-content-center align-items-center" id="loader">
+    <div class="spinner"></div>
+</div>
+
+<nav class="navbar navbar-dark" style="background-color: #2b3245;">
+    <a class="navbar-brand" href="#">
+        <i class="px-1 fas fa-fingerprint"></i>
+        Esthetic
+    </a>
+    <div class="d-flex align-items-center"><a class="px-4 mr-5 btn btn-outline-secondary" href="#" role="button"
+                                              onclick="test()">Upgrate
+        Plan</a>
+        <img src="pics/avatar.png" alt="User pic" class="mr-3 userpic">
+    </div>
+</nav>
+
+<nav class="navbar navbar-light" style="background-color: white">
+    <div class="d-flex align-items-center">
+        <form class="form-inline">
+            <i class="px-1 fab fa-sistrix"></i>
+            <input class="form-control pr-5 mr-sm-2" type="search" placeholder="Search for groups, etc."
+                   aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas pr-2 fa-plus"></i>Add
+                person
+            </button>
+        </form>
+        <a href="#"><i class="ml-4 fas fa-sync-alt"></i></a>
+    </div>
+
+    <div class="d-flex align-items-center">
+        <div class="icon1">
+            <a class="btn icon" href="#" role="button"><i class="fas fa-th"></i></a>
+            <a class="btn ml-2 mr-3 icon" href="#" role="button"><i class="fas fa-list"></i></a>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn mr-5 btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                Relevant
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div class="row">
+    <div class="col-12 col-md-3 col-xl-2 position-relative">
+            <div class="sidenav">
+                <a class="sidenav-icon" id="si1" href="#"><i class="fas side fa-layer-group"></i></a>
+                <a class="sidenav-icon" id="si2" href="#"><i class="fas side fa-archive"></i></a>
+                <a class="sidenav-icon" id="si3" href="#"><i class="far side fa-clock"></i></a>
+                <a class="sidenav-icon" id="si4" href="#"><i class="fas side fa-trophy"></i></a>
+                <a class="sidenav-icon" id="si5" href="#"><i class="fas side fa-eye"></i></a>
+                <a class="sidenav-icon" id="si6" href="#"><i class="fas side fa-briefcase"></i></a>
+                <a class="sidenav-icon" id="si7" href="#"><i class="far side fa-heart"></i></a> <!--без понятия, что это в макете-->
+                <a class="sidenav-icon" id="si8" href="#"><i class="fas side fa-cog"></i></a>
+            </div>
+
+            <div class="sidenav-menu position-absolute">
+            </div>
+    </div>
+
+    <div class="col-12 col-md-9 col-xl-10">
+
+        <div class="mt-5 container">
+            <div class="row">
+                <div class="col-12 devs">
+                    <span style="color: #778898">Developers</span>
+                    <div class="d-flex align-items-center">
+                <span>
+                    <button type="button" class="px-3 mr-3 btn btn-light" onclick="selectAll()">Select all</button>
+                </span>
+                        <span>
+                    <button type="button" class="btn btn-danger" onclick="deleteChosen()"><i class="pr-2 fas fa-trash-alt"></i>Delete</button>
+                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 box">
+                    <div class="card">
+                        <div class="user-icons">
+                            <span><i class="fas fa-check-circle"></i></span>
+                            <div>
+                                <span><i class="px-2 fas fa-pencil-alt"></i></span>
+                                <span><i class="fas fa-trash-alt"></i></span>
+                            </div>
+                        </div>
+                        <img src="pics/avatar.png" alt="Avatar" class="avatar">
+                        <div class="name">Alan Podemski</div>
+                        <div class="mb-4 country"><i class="pr-1 fas fa-map-marker-alt"></i>Poland</div>
+                        <div class="info">
+                            <div class="followers">
+                                <span>Followers</span><br>
+                                <span class="number">6941</span>
+                            </div>
+                            <div class="following">
+                                <span>Following</span><br>
+                                <span class="number">413</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 box">
+                    <div class="card">
+                        <i class="far fa-circle"></i>
+                        <img src="pics/avatar2.png" alt="Avatar" class="avatar">
+                        <div class="name">John Smith</div>
+                        <div class="mb-4 country"><i class="pr-1 fas fa-map-marker-alt"></i>United Kingdom</div>
+                        <div class="info">
+                            <div class="followers">
+                                <span>Followers</span><br>
+                                <span class="number">6228</span>
+                            </div>
+                            <div class="following">
+                                <span>Following</span><br>
+                                <span class="number">756</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 box">
+                    <div class="card">
+                        <i class="far fa-circle"></i>
+                        <img src="pics/avatar2.png" alt="Avatar" class="avatar">
+                        <div class="name">Tommy Jeffrey</div>
+                        <div class="mb-4 country"><i class="pr-1 fas fa-map-marker-alt"></i>United States</div>
+                        <div class="info">
+                            <div class="followers">
+                                <span>Followers</span><br>
+                                <span class="number">5466</span>
+                            </div>
+                            <div class="following">
+                                <span>Following</span><br>
+                                <span class="number">43</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 box">
+                    <div class="card">
+                        <i class="far fa-circle"></i>
+                        <img src="pics/avatar2.png" alt="Avatar" class="avatar">
+                        <div class="name">Brian Howard</div>
+                        <div class="mb-4 country"><i class="pr-1 fas fa-map-marker-alt"></i>Australia</div>
+                        <div class="info">
+                            <div class="followers">
+                                <span>Followers</span><br>
+                                <span class="number">5432</span>
+                            </div>
+                            <div class="following">
+                                <span>Following</span><br>
+                                <span class="number">45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 box">
+                    <div class="card">
+                        <i class="far fa-circle"></i>
+                        <img src="pics/avatar2.png" alt="Avatar" class="avatar">
+                        <div class="name">Jimmy Alister</div>
+                        <div class="mb-4 country"><i class="pr-1 fas fa-map-marker-alt"></i>Canada</div>
+                        <div class="info">
+                            <div class="followers">
+                                <span>Followers</span><br>
+                                <span class="number">2233</span>
+                            </div>
+                            <div class="following">
+                                <span>Following</span><br>
+                                <span class="number">887</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 box">
+                    <div class="card">
+                        <i class="far fa-circle"></i>
+                        <img src="pics/avatar2.png" alt="Avatar" class="avatar">
+                        <div class="name">Koby Soon</div>
+                        <div class="mb-4 country"><i class="pr-1 fas fa-map-marker-alt"></i>Sweden</div>
+                        <div class="info">
+                            <div class="followers">
+                                <span>Followers</span><br>
+                                <span class="number">112</span>
+                            </div>
+                            <div class="following">
+                                <span>Following</span><br>
+                                <span class="number">232</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    if (!HTMLCollection.prototype.findIndex) {
+        HTMLCollection.prototype.findIndex = function(predicate) {
+            if (this == null) {
+                throw new TypeError('Array.prototype.findIndex called on null or undefined');
+            }
+            if (typeof predicate !== 'function') {
+                throw new TypeError('predicate must be a function');
+            }
+            var list = Object(this);
+            var length = list.length >>> 0;
+            var thisArg = arguments[1];
+            var value;
+
+            for (var i = 0; i < length; i++) {
+                value = list[i];
+                if (predicate.call(thisArg, value, i, list)) {
+                    return i;
+                }
+            }
+            return -1;
+        };
+    }
+</script>
+
+<script>
+    function test() {
+        if (confirm('Upgrate your plan?')) {
+           alert('Your plan was successfully upgrated!')
+        }
+    }
+
+    function selectAll() {
+        for (const card of document.getElementsByClassName('card')){
+            card.classList.add('chosen');
+        }
+    }
+
+    const CARD_COUNT = 6;
+    /*const cards = document.getElementsByClassName('card');*/
+    /*classList - возвращает псевомассив всех классов,который содержит элемент example*/
+    function deleteChosen(element) {
+        /*for (let i = 0; i < CARD_COUNT; i++) {
+            if (cards.classList.contains('chosen')) cards.removeChild(element);
+        }*/
+        for(const card of document.getElementsByClassName("chosen")){
+            card.parentNode.removeChild(card);
+        }
+        return false;
+    }
+
+/*    function scroll () {
+        var hasBeenTriggered = false;
+        window.onscroll = function () {
+            if (window.scrollY >= 500 && !hasBeenTriggered) {
+                alert("You've scrolled 500 pixels!");
+                hasBeenTriggered = true;
+            }
+        }
+    }*/
+
+    /*scroll();*/
+</script>
+
+<script>
+    const LINK = { name: 'first', link: 'google.ru'}; /*создали объект с параметрами name и link*/
+    const LINK_ELEMENT = `<a class="d-block" href="${LINK.link}">${LINK.name}</a>`; /*интегрируем внутрь строки сторонний объект*/
+    const MENU_COUNT = 8;
+    function generateLinks(link) {
+        const linkSet = [];
+        for (let i = 0; i < MENU_COUNT; i++) {
+            const links = [];
+            for (let j = 0; j < i + 1; j++) links.push(link);
+            linkSet.push(links);
+        }
+        return linkSet;
+    }
+
+    const menu = generateLinks(LINK);
+    const sidenav = document.getElementsByClassName('sidenav-menu')[0]; /*массив потому что класс (применим для множества для элементов*/
+
+    function appendLinksToSidenav(serialNumber) {
+        sidenav.innerHTML = ''; /*все почистить)*/
+        for (let link of document.getElementsByClassName('sidenav-icon')) link.classList.remove('active');
+
+        for (const link of menu[serialNumber]) { /*интеграция ссылок внутрь меню*/
+            const linkElement = document.createElement('a'); /*экземпляр класса HTMLElement по тегу a*/
+            linkElement.classList.add('d-block'); /*добавляем класс*/
+            /*linkElement.href = link.link;*/ /*назначаем атрибут href, аналог ниже*/
+            linkElement.setAttribute('href', link.link); /*универсальный метод для назначения атрибута html объекту*/
+            linkElement.innerHTML = link.name; /*описываем тело тега (контент)*/
+            /*теперь есть полноценный элемент*/
+            sidenav.appendChild(linkElement); /*вставляет сгенерированные ссылки в sidenav*/
+        }
+        sidenav.classList.add('active'); /*активация скрытого контента*/
+        const element = document.getElementById(`si${serialNumber+1}`);
+        element.classList.add('active');
+    }
+
+    /*$('.sidenav-menu').append('<a></a>');*/
+
+    for (let i = 0; i < MENU_COUNT; i++) {
+        const element = document.getElementById(`si${i+1}`); /*внутрь строки интегрируем переменную*/ /*i+1 потому что i=0*/
+        element.onclick = () => appendLinksToSidenav(i);
+    }
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
