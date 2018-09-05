@@ -1,4 +1,3 @@
-/*$ это JQuery*/
 function hideLoader() {
     setTimeout(() => {
         $('#loader').addClass('d-none');
