@@ -269,12 +269,7 @@
     }
 
     const CARD_COUNT = 6;
-    /*const cards = document.getElementsByClassName('card');*/
-    /*classList - возвращает псевомассив всех классов,который содержит элемент example*/
     function deleteChosen(element) {
-        /*for (let i = 0; i < CARD_COUNT; i++) {
-            if (cards.classList.contains('chosen')) cards.removeChild(element);
-        }*/
         for(const card of document.getElementsByClassName("chosen")){
             card.parentNode.removeChild(card);
         }
@@ -295,8 +290,8 @@
 </script>
 
 <script>
-    const LINK = { name: 'first', link: 'google.ru'}; /*создали объект с параметрами name и link*/
-    const LINK_ELEMENT = `<a class="d-block" href="${LINK.link}">${LINK.name}</a>`; /*интегрируем внутрь строки сторонний объект*/
+    const LINK = { name: 'first', link: 'google.ru'};
+    const LINK_ELEMENT = `<a class="d-block" href="${LINK.link}">${LINK.name}</a>`;
     const MENU_COUNT = 8;
     function generateLinks(link) {
         const linkSet = [];
@@ -309,30 +304,26 @@
     }
 
     const menu = generateLinks(LINK);
-    const sidenav = document.getElementsByClassName('sidenav-menu')[0]; /*массив потому что класс (применим для множества для элементов*/
+    const sidenav = document.getElementsByClassName('sidenav-menu')[0];
 
     function appendLinksToSidenav(serialNumber) {
-        sidenav.innerHTML = ''; /*все почистить)*/
+        sidenav.innerHTML = '';
         for (let link of document.getElementsByClassName('sidenav-icon')) link.classList.remove('active');
 
-        for (const link of menu[serialNumber]) { /*интеграция ссылок внутрь меню*/
-            const linkElement = document.createElement('a'); /*экземпляр класса HTMLElement по тегу a*/
-            linkElement.classList.add('d-block'); /*добавляем класс*/
-            /*linkElement.href = link.link;*/ /*назначаем атрибут href, аналог ниже*/
-            linkElement.setAttribute('href', link.link); /*универсальный метод для назначения атрибута html объекту*/
-            linkElement.innerHTML = link.name; /*описываем тело тега (контент)*/
-            /*теперь есть полноценный элемент*/
-            sidenav.appendChild(linkElement); /*вставляет сгенерированные ссылки в sidenav*/
+        for (const link of menu[serialNumber]) {
+            const linkElement = document.createElement('a');
+            linkElement.classList.add('d-block');
+            linkElement.setAttribute('href', link.link);
+            linkElement.innerHTML = link.name;
+            sidenav.appendChild(linkElement);
         }
-        sidenav.classList.add('active'); /*активация скрытого контента*/
+        sidenav.classList.add('active'); 
         const element = document.getElementById(`si${serialNumber+1}`);
         element.classList.add('active');
     }
 
-    /*$('.sidenav-menu').append('<a></a>');*/
-
     for (let i = 0; i < MENU_COUNT; i++) {
-        const element = document.getElementById(`si${i+1}`); /*внутрь строки интегрируем переменную*/ /*i+1 потому что i=0*/
+        const element = document.getElementById(`si${i+1}`);
         element.onclick = () => appendLinksToSidenav(i);
     }
 
